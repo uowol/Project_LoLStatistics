@@ -30,7 +30,9 @@ for matchId in matches_id:
         json_data = json.loads(res.text)
         data.append(json_data)
     else:
-        print("error : {code}".format(code=res.status_code))    # errorCode 429: too many requests
+        print("error : {code} where {matchId}".format(code=res.status_code, matchId=matchId))    # errorCode 429: too many requests
+        # 404 error?
+        # 503 error?
 if len(data) > 0:
     print("read successfully : {length}".format(length=len(data)))
     with open(MATCH_DATA_FILE_NAME, 'w') as outfile:
