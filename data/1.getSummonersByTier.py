@@ -1,12 +1,13 @@
 from API import *
 
-QUEUE       = "RANKED_SOLO_5x5"
-TIER        = "SILVER"
-DIVISION    = "III"
-PAGE        = "1"
+### in API.py
+# QUEUE       = "RANKED_SOLO_5x5"
+# TIER        = "GOLD"
+# DIVISION    = "III"
+# PAGE        = "1"
 
-# get league data - silver 3 solo rank
-url = GET("kr", "lol/league/v4/entries/{queue}/{tier}/{division}?page={page}".format(queue=QUEUE, tier=TIER, division=DIVISION, page=PAGE), True)
+### get league data
+url = GET("kr", FILE_NAME, True)
 res = requests.get(url)
 
 if res.status_code == 200:
