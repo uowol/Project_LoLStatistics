@@ -1,6 +1,6 @@
 from API import *
 
-TYPE    = "normal"     # ranked / normal 
+TYPE    = "ranked"     # ranked / normal 
 START   = "0"
 COUNT   = "100"         
 
